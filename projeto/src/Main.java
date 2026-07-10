@@ -1,6 +1,7 @@
 import model.Chamados;
 import model.Menu;
-
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -56,6 +57,22 @@ public class Main {
                     construtorChamados.setId(id++);
                     String Id = Integer.toString(id);
                     elementos.add(Id);
+
+                    String nomeArquivo = Id + "-" + construtorChamados.getUnidadeEscolar();
+
+                    /*try{
+                     File criarChamado = new File("C:\\Desktop" + nomeArquivo);
+                     if(criarChamado.createNewFile()){
+                         System.out.println("Arquivo criado!: " + criarChamado.getName());
+                     } else {
+                         System.out.println("Arquivo já existe!");
+                     }
+                    } catch (IOException e){
+                        System.out.println("Ocorreu um erro.");
+                        e.printStackTrace();
+                    }*/
+
+
                     break;
 
                 case 2:
