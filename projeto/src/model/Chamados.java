@@ -14,6 +14,7 @@ public class Chamados{
     String horarioAntedimento;
     LocalDateTime horario;
     String status;
+    String nomeArquivo;
 
     public Chamados(){
         //adicionar os valores depois
@@ -27,6 +28,7 @@ public class Chamados{
         this.descProblema = descProblema;
         this.prioridade = prioridade;
         this.horarioAntedimento = horarioAntedimento;
+        this.nomeArquivo = nomeArquivo;
 
         this.status = "Aberto";
         this.horario = LocalDateTime.now();
@@ -103,6 +105,14 @@ public class Chamados{
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getNomeArquivo(){
+        return nomeArquivo;
+    }
+
+    public void setNomeArquivo(String nomeArquivo){
+        this.nomeArquivo = nomeArquivo;
     }
 }
 
